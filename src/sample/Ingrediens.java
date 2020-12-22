@@ -16,6 +16,18 @@ public class Ingrediens {
     }
 
 
+    //rig på kalorier metode
+    public boolean rigPaaKalorier(){
+        if(kalorie <100){
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+
     // Getters og Setters
     public String getNavn() {
         return navn;

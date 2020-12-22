@@ -21,6 +21,7 @@ public class SimpleTest {
         Ingrediens tebrev = new Ingrediens("Tebrev ", 10);
         Ingrediens kogendeVand = new Ingrediens("Vand ",0);
         Ingrediens citron = new Ingrediens("Citron ", 5);
+        Ingrediens sukker = new Ingrediens("Sukker",900);
         blankLinje();
         System.out.println("******************");
         System.out.println("**Viser opskrift**");
@@ -32,14 +33,21 @@ public class SimpleTest {
         te.addIngrediens(tebrev);
         te.addIngrediens(kogendeVand);
         te.addIngrediens(citron);
-        te.addIngrediens("Sukker",900);
+        te.addIngrediens(sukker);
         glasur.visIngredienser();
         te.visIngredienser();
         te.visFremgangsmaade();
         blankLinje();
-
-
-
+        System.out.println("********************");
+        System.out.println("**KalorieBeregning**");
+        System.out.println("********************");
+        blankLinje();
+        if(citron.rigPaaKalorier()){
+            System.out.println("Citron er rig på kallorie ");
+        }else System.out.println("Citron er ikke rig på kalorie");
+        if(sukker.rigPaaKalorier()){
+            System.out.println("Sukker er rig på kallorie ");
+        }else System.out.println("Sukker er ikke rig på kalorie");
     }
 
 
