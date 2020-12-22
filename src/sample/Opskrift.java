@@ -63,7 +63,15 @@ public class Opskrift implements KalorierBeregner{
     }
 
 
-
+    // kalorierPerPotion metode
+    public int kalorierPerPotion(){
+        try{
+            return kalorieriAlt()/antalPortioner;
+        }catch (ArithmeticException e ){
+            System.out.println(" FEJL - opskriften Te må ikke have 0 portioner!");
+        }
+        return 0;
+    }
 
 
 

@@ -17,7 +17,7 @@ public class SimpleTest {
         Ingrediens flormelis = new Ingrediens("Flormelis" , 100 );
         Ingrediens vand = new Ingrediens("Vand",0);
         blankLinje();
-        Opskrift te = new Opskrift("Te","Put TeBrev i kogenden vand og lad trække i 4 minutter tilføj tilsidst lidt citron",1,5);
+        Opskrift te = new Opskrift("Te","Put TeBrev i kogenden vand og lad trække i 4 minutter tilføj tilsidst lidt citron",0,5);
         Ingrediens tebrev = new Ingrediens("Tebrev ", 10);
         Ingrediens kogendeVand = new Ingrediens("Vand ",0);
         Ingrediens citron = new Ingrediens("Citron ", 5);
@@ -61,7 +61,8 @@ public class SimpleTest {
         blankLinje();
         System.out.println("Ingrediens vand indenholder " + vand.kalorieriAlt() + " kalorier. ");
         System.out.println("Opskriften Te indenholder " + te.kalorieriAlt() + " kalorier i alt ");
-
+        blankLinje();
+        System.out.println("opskriften indeholder " + te.kalorieriAlt() + " og " + te.kalorierPerPotion() + " per potion ");
 
 
 
