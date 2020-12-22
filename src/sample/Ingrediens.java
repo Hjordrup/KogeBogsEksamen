@@ -5,6 +5,15 @@ public class Ingrediens implements KalorierBeregner{
     // Eksemple på instants variabler.
     private String navn;
     private int kalorie;
+
+    public Diet getDiet() {
+        return diet;
+    }
+
+    public void setDiet(Diet diet) {
+        this.diet = diet;
+    }
+
     private Diet diet;
 
 

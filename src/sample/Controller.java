@@ -13,24 +13,16 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class Controller implements Initializable {
-
+    @FXML
+    private Label dietLabel;
     @FXML
     private TextArea ingrediensView;
     @FXML
     private TextArea fremgangsmaadeView;
     @FXML
     private Label opskriftNavn;
-    @FXML
-    private Button indlaesKnap;
-    @FXML
-    private Button saveKnap;
-    @FXML
-    private Button loadKnap;
-    @FXML
-    private Button addKnap;
 
 
-    public Object getOpskriftList;
     ArrayList<Opskrift> opskriftList= new ArrayList<>();
 
 
@@ -58,7 +50,7 @@ public class Controller implements Initializable {
 
     }
 
-
+    // Denne metode sætter felterne i gui til den rette information.
     public void startIndlaes(){
     opskriftNavn.setText(opskriftList.get(0).getNavn());
         for (int i = 0; i < opskriftList.get(0).getIngredienser().size(); i++) {
@@ -75,6 +67,7 @@ public class Controller implements Initializable {
 
         java.io.File file = new java.io.File("src/persistence/saveFile.txt");
         try{
+
             java.io.PrintWriter output = new java.io.PrintWriter(file);
             output.print(opskriftList.get(0).getNavn());
             output.println("");
@@ -90,11 +83,42 @@ public class Controller implements Initializable {
                 output.print(opskriftList.get(0).getIngredienser().get(i).getKalorie());
                 output.println("");
             }
+
             output.close();
             System.out.println("The file has been saved");
+
+
         }catch (Exception e ){
             System.out.println("Filen blev ikke gemt");
         }
 
     }
+
+
+
+    public void koed(){
+
+        for (int i = 0; i < opskriftList.get(0).getIngredienser().size(); i++) {
+
+            if(opskriftList.get(0).getIngredienser().get(i).getDiet() == Diet.KØD){
+                dietLabel.setText("Denne opskrift indenholder Kød");
+
+            }dietLabel.setText("Nej denne opskrift indenholder ikke Kød");
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
