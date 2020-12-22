@@ -42,8 +42,7 @@
             <HBox prefHeight="71.0" prefWidth="300.0">
                <children>
                   <Button fx:id="indlaesKnap" mnemonicParsing="false" onAction="#startIndlaes" text="Indlæs Opskrift" />
-                  <Button fx:id="saveKnap" mnemonicParsing="false"  onAction="#saveOpskrift" text="Save" />
-                  <Button fx:id="loadKnap" mnemonicParsing="false"  onAction="#loadOpskrift" text="Load" />
+                  <Button fx:id="saveKnap" mnemonicParsing="false" text="Save" />
                </children>
             </HBox>
          </children>
