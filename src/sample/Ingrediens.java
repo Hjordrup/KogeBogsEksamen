@@ -7,9 +7,8 @@ public class Ingrediens implements KalorierBeregner{
     private int kalorie;
     private Diet diet;
 
-    //Constructor
 
-
+    //EKSEMPEL på Constructor
     public Ingrediens(String navn, int kalorie) {
         this.navn = navn;
         this.kalorie = kalorie;
@@ -17,7 +16,7 @@ public class Ingrediens implements KalorierBeregner{
     }
 
 
-    //rig på kalorier metode
+    //EKSEMPEL på en metode der retunere om et produkt er rig på kalorier
     public boolean rigPaaKalorier(){
         if(kalorie <100){
             return false;
@@ -25,11 +24,16 @@ public class Ingrediens implements KalorierBeregner{
         return true;
     }
 
+    //EKSEMPEL på metode der retunere kalorie indenhold for en ingrediens
+    @Override
+    public int kalorieriAlt() {
+        return kalorie;
+    }
 
 
 
 
-    // Getters og Setters
+    // Getters og Setters for klassens private variabler.
     public String getNavn() {
         return navn;
     }
@@ -46,9 +50,4 @@ public class Ingrediens implements KalorierBeregner{
         this.kalorie = kalorie;
     }
 
-
-    @Override
-    public int kalorieriAlt() {
-        return kalorie;
-    }
 }

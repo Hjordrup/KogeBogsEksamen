@@ -1,9 +1,5 @@
 package sample;
 
-public interface KalorierBeregner {
 
-
-    int kalorieriAlt();
-
-
-}
+// EKSEMPEL på et interface. med en enkel metode.
+public interface KalorierBeregner { int kalorieriAlt();}
