@@ -28,14 +28,15 @@ public class SimpleTest {
         blankLinje();
         glasur.addIngrediens(flormelis);
         glasur.addIngrediens(vand);
+        glasur.visFremgangsmaade();
         te.addIngrediens(tebrev);
         te.addIngrediens(kogendeVand);
         te.addIngrediens(citron);
         te.addIngrediens("Sukker",900);
         glasur.visIngredienser();
         te.visIngredienser();
-
-
+        te.visFremgangsmaade();
+        blankLinje();
 
 
 

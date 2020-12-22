@@ -48,6 +48,15 @@ public class Opskrift {
     }
 
 
+    // visFremgangsmaade metode
+    public void visFremgangsmaade(){
+
+        System.out.println("Opskriften for glasur: ");
+        System.out.println(" - " + this.fremgangsmaade);
+    }
+
+
+
 
 
 
