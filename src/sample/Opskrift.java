@@ -65,6 +65,8 @@ public class Opskrift implements KalorierBeregner{
 
     // kalorierPerPotion metode
     public int kalorierPerPotion(){
+
+        // try catch der smider en fejl hvis der bliver divederet med nul
         try{
             return kalorieriAlt()/antalPortioner;
         }catch (ArithmeticException e ){

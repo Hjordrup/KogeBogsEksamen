@@ -5,6 +5,7 @@ public class Ingrediens implements KalorierBeregner{
     // Eksemple på instants variabler.
     private String navn;
     private int kalorie;
+    private Diet diet;
 
     //Constructor
 
