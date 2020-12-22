@@ -1,8 +1,9 @@
 package sample;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Opskrift implements KalorierBeregner{
+public class Opskrift implements KalorierBeregner {
 
     private String navn;
     private String fremgangsmaade;

@@ -1,31 +1,41 @@
 package sample;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-
+import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 public class Controller implements Initializable {
 
     @FXML
     private TextArea ingrediensView;
-
     @FXML
     private TextArea fremgangsmaadeView;
-
     @FXML
     private Label opskriftNavn;
-
     @FXML
     private Button indlaesKnap;
+    @FXML
+    private Button saveKnap;
+    @FXML
+    private Button loadKnap;
+    @FXML
+    private Button addKnap;
 
 
-
+    public Object getOpskriftList;
     ArrayList<Opskrift> opskriftList= new ArrayList<>();
+
+
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -43,9 +53,9 @@ public class Controller implements Initializable {
         te.addIngrediens(vand);
         te.addIngrediens(citron);
         te.addIngrediens(teBrev);
-
-        opskriftList.add(te);
         fremgangsmaadeView.setWrapText(true);
+        opskriftList.add(te);
+
     }
 
 
@@ -60,10 +70,31 @@ public class Controller implements Initializable {
     }
 
 
+    // Denne metode skaber en fill der indenholder alt information omkring den første opskrift i listen.
+    public void saveOpskrift(ActionEvent event) {
 
+        java.io.File file = new java.io.File("src/persistence/saveFile.txt");
+        try{
+            java.io.PrintWriter output = new java.io.PrintWriter(file);
+            output.print(opskriftList.get(0).getNavn());
+            output.println("");
+            output.print(opskriftList.get(0).getFremgangsmaade());
+            output.println("");
+            output.print(opskriftList.get(0).getTilberedningstid());
+            output.println("");
+            output.print(opskriftList.get(0).getAntalPortioner());
+            output.println("");
+            for (int i = 0; i < opskriftList.get(0).getIngredienser().size(); i++) {
+                output.print(opskriftList.get(0).getIngredienser().get(i).getNavn());
+                output.print(" ");
+                output.print(opskriftList.get(0).getIngredienser().get(i).getKalorie());
+                output.println("");
+            }
+            output.close();
+            System.out.println("The file has been saved");
+        }catch (Exception e ){
+            System.out.println("Filen blev ikke gemt");
+        }
 
-
-
-
-
+    }
 }
