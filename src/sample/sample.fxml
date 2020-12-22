@@ -47,7 +47,7 @@
             </HBox>
             <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="kødKnap" mnemonicParsing="false" onAction="#koed" prefWidth="156.0" text="Indeolder opskriften kød? " />
+                  <Button fx:id="kødKnap" mnemonicParsing="false" onAction="#koedAlgoritme" prefWidth="156.0" text="Indeolder opskriften kød? " />
                   <Label fx:id="dietLabel" text="?" />
                </children>
             </VBox>

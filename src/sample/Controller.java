@@ -50,7 +50,7 @@ public class Controller implements Initializable {
 
     }
 
-    // Denne metode sætter felterne i gui til den rette information.
+    // Opgave 13 Denne metode sætter felterne i gui til den rette information.
     public void startIndlaes(){
     opskriftNavn.setText(opskriftList.get(0).getNavn());
         for (int i = 0; i < opskriftList.get(0).getIngredienser().size(); i++) {
@@ -62,7 +62,7 @@ public class Controller implements Initializable {
     }
 
 
-    // Denne metode skaber en fill der indenholder alt information omkring den første opskrift i listen.
+    // Opgave 14 Denne metode skaber en fill der indenholder alt information omkring den første opskrift i listen.
     public void saveOpskrift(ActionEvent event) {
 
         java.io.File file = new java.io.File("src/persistence/saveFile.txt");
@@ -95,8 +95,8 @@ public class Controller implements Initializable {
     }
 
 
-
-    public void koed(){
+    //Opgave 15 Denne algoritme løber igennem opskriftlisten første opskrift og tjekker om nogle af elementerne har en diet variable der matcher kød
+    public void koedAlgoritme(){
 
         for (int i = 0; i < opskriftList.get(0).getIngredienser().size(); i++) {
 
