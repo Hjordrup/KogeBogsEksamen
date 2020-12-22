@@ -8,7 +8,7 @@ public class Opskrift {
     private String fremgangsmaade;
     private int antalPortioner;
     private int tilberedningstid;
-    private ArrayList<Ingrediens> ingredienser;
+    private ArrayList<Ingrediens> ingredienser = new ArrayList<>();
 
     //Constructor
     public Opskrift() {
@@ -22,6 +22,33 @@ public class Opskrift {
         this.tilberedningstid = tilberedningstid;
         System.out.println("Opskrift er oprettet: " + navn);
     }
+
+    //addIngrediens metoder:
+
+    public void addIngrediens(Ingrediens ingrediens){
+        ingredienser.add(ingrediens);
+    }
+
+    public void addIngrediens(String navn, int kalorie ){
+        ingredienser.add(new Ingrediens("Vand ",0));
+    }
+
+
+    //visIngredienser metode
+
+    public void visIngredienser(){
+        System.out.println("Du skal til " + getNavn() + " Bruge ");
+        for (Ingrediens i : ingredienser){
+
+            System.out.print("- ");
+            System.out.println(i.getNavn());
+        }
+
+
+    }
+
+
+
 
 
     // Getters og Setters
