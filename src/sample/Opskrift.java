@@ -2,7 +2,7 @@ package sample;
 
 import java.util.ArrayList;
 
-public class Opskrift {
+public class Opskrift implements KalorierBeregner{
 
     private String navn;
     private String fremgangsmaade;
@@ -106,5 +106,15 @@ public class Opskrift {
 
     public void setIngredienser(ArrayList<Ingrediens> ingredienser) {
         this.ingredienser = ingredienser;
+    }
+
+    @Override
+    public int kalorieriAlt() {
+        int tmpKalorie = 0;
+        for (Ingrediens i :
+             ingredienser) {
+            tmpKalorie =tmpKalorie + i.getKalorie();
+        }
+        return tmpKalorie;
     }
 }

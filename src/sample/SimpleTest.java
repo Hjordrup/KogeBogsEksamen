@@ -58,6 +58,12 @@ public class SimpleTest {
         if (poelse.godModForkoeelse()){
             System.out.println("Pølse er god mod forkøelse.");
         }else System.out.println("Pølse er ikke god mod forkøelse");
+        blankLinje();
+        System.out.println("Ingrediens vand indenholder " + vand.kalorieriAlt() + " kalorier. ");
+        System.out.println("Opskriften Te indenholder " + te.kalorieriAlt() + " kalorier i alt ");
+
+
+
 
 
 

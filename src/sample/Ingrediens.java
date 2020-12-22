@@ -1,6 +1,6 @@
 package sample;
 
-public class Ingrediens {
+public class Ingrediens implements KalorierBeregner{
 
     // Eksemple på instants variabler.
     private String navn;
@@ -46,6 +46,8 @@ public class Ingrediens {
     }
 
 
-
-
+    @Override
+    public int kalorieriAlt() {
+        return kalorie;
+    }
 }
