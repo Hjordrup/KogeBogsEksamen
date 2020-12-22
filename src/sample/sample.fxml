@@ -1,8 +1,45 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="336.0" prefHeight="400.0" prefWidth="300.0">
+         <children>
+            <Label text="Ingredienser">
+               <font>
+                  <Font name="Script MT Bold" size="29.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="ingrediensView" prefHeight="147.0" prefWidth="300.0" />
+            <Label prefHeight="27.0" prefWidth="198.0" text="FremgangsMåde">
+               <font>
+                  <Font name="Script MT Bold" size="29.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="fremgangsmaadeView" prefHeight="132.0" prefWidth="300.0" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="25.0" prefHeight="400.0" prefWidth="300.0">
+         <children>
+            <Label text="Opskrift">
+               <font>
+                  <Font name="Script MT Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="opskriftNavn" text="Navn">
+               <padding>
+                  <Insets bottom="50.0" top="20.0" />
+               </padding>
+            </Label>
+            <Button fx:id="indlaesKnap" mnemonicParsing="false" onAction="#startIndlaes" text="Indlæs Opskrift" />
+         </children>
+      </VBox>
+   </children>
+</Pane>
