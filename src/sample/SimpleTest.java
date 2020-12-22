@@ -48,7 +48,29 @@ public class SimpleTest {
         if(sukker.rigPaaKalorier()){
             System.out.println("Sukker er rig på kallorie ");
         }else System.out.println("Sukker er ikke rig på kalorie");
+        blankLinje();
+        IngrediensMedNaeringsdetaljer citronMedDetaljer = new IngrediensMedNaeringsdetaljer("Citron",5,200,0,0);
+        if (citronMedDetaljer.godModForkoeelse()){
+            System.out.println("Citron er god mod forkøelse.");
+        }else System.out.println("Citron er ikke god mod forkøelse");
+        blankLinje();
+        IngrediensMedNaeringsdetaljer poelse = new IngrediensMedNaeringsdetaljer("Pølse ", 300,0,10,15);
+        if (poelse.godModForkoeelse()){
+            System.out.println("Pølse er god mod forkøelse.");
+        }else System.out.println("Pølse er ikke god mod forkøelse");
+
+
+
     }
+
+
+
+
+
+
+
+
+
 
 
     // Opgave 2 hjælpe Metode til at vise blanke linjer
