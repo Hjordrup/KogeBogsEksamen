@@ -35,7 +35,6 @@ public class Opskrift {
 
 
     //visIngredienser metode
-
     public void visIngredienser(){
         System.out.println("Du skal til " + getNavn() + " Bruge ");
         for (Ingrediens i : ingredienser){
@@ -53,6 +52,14 @@ public class Opskrift {
 
         System.out.println("Opskriften for glasur: ");
         System.out.println(" - " + this.fremgangsmaade);
+    }
+
+
+
+    // visOpskrift Metode
+    public void visOpskrift(){
+    this.visIngredienser();
+    this.visFremgangsmaade();
     }
 
 
